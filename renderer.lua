@@ -1,5 +1,8 @@
 local monitor = peripheral.find("monitor")
 local terminal = term.current()
+if monitor == nil then
+    monitor = terminal
+end
 --local terminal = term.redirect(monitor)
 local width, height = term.getSize()
 
